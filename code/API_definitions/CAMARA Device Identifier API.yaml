@@ -1,4 +1,4 @@
-openapi: "3.0.3"
+openapi: 3.1.0
 info:
   title: CAMARA Device Identifier API
   version: 0.2.0
@@ -146,7 +146,7 @@ components:
   securitySchemes:
     openId:
       type: openIdConnect
-      openIdConnectUrl: .well-known/openid-configuration
+      openIdConnectUrl: http://localhost/.well-known/openid-configuration
 
   responses:
     200Response:
