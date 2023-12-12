@@ -97,7 +97,7 @@ servers:
         default: https://localhost:443
         description: API root
       basePath:
-        default: dvi/v0
+        default: device-identifier/v0
         description: Base path for the Device Identifier API
 paths:
   "/get-device-identifier":
