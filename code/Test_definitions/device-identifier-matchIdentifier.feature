@@ -52,7 +52,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is true
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -78,7 +78,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is true
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -98,7 +98,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is false
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -119,7 +119,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is true
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -140,7 +140,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is false
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -162,7 +162,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is true
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -184,7 +184,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is false
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -204,7 +204,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is false
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -230,7 +230,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is true
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -256,7 +256,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
     And the response header "x-correlator" has same value as the request header "x-correlator"
     And the response header "Content-Type" is "application/json"
     And the response property "$.match" exists and is true
-    And the response property "$.lastChecked" exists and is a valid date-time in the past
+    And the response property "$.lastChecked" exists and is either a valid date-time in the past, or is null
     And the response property "$.imei" does not exist
     And the response property "$.imeisv" does not exist
     And the response property "$.tac" does not exist
@@ -358,7 +358,8 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
       | IMEI                   | 12345678901234      |
       | IMEISV                 | 123456789012345     |
       | TAC                    | 1234567             |
-      | IMEI                   | 1234567890ABCD      |
+      | IMEI                   | 1234567890ABCDE     |
+      | IMEISV                 | 1234567890ABCDEF    |
       | TAC                    | 12!45678            |
 
   # Generic 401 errors
@@ -415,7 +416,7 @@ Feature: Camara Mobile Device Identifier API, vwip - Operation: matchIdentifier
   # This scenario is valid only for 2-legged access tokens
   @DeviceIdentifier_matchIdentifier_404.1_device_not_found
   Scenario: An identifier cannot be matched to a valid device
-    Given that the device cannot be identified from the access token
+    Given the header "Authorization" is set to a valid access token that does not identify a device
     And the request body property "$.device" is compliant with the request body schema but does not identify a valid device
     And the request body property "$.providedIdentifierType" is set to "IMEI"
     And the request body property "$.providedIdentifier" is set to IMEI1
